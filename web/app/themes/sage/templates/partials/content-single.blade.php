@@ -1,3 +1,4 @@
+<!-- START: content-single.blade.php -->
 <article @php(post_class())>
   <header>
     <h1 class="entry-title">{{ get_the_title() }}</h1>
@@ -11,3 +12,4 @@
   </footer>
   @php(comments_template('/templates/partials/comments.blade.php'))
 </article>
+<!-- END: content-single.blade.php -->

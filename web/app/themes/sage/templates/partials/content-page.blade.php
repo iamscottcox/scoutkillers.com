@@ -1,2 +1,9 @@
-@php(the_content())
-{!! wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}
+<!-- START: content-page.blade.php -->
+<div class="container">
+	<div class="row">
+		<div class="col-xs">
+			@php(the_content())
+		</div>
+	</div>
+</div>
+<!-- END: content-page.blade.php -->

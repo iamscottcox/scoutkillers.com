@@ -1,3 +1,4 @@
+<!-- START: 404.blade.php -->
 @extends('layouts.base')
 
 @section('content')
@@ -12,3 +13,4 @@
 
   {!! get_the_posts_navigation() !!}
 @endsection
+<!-- END: 404.blade.php -->

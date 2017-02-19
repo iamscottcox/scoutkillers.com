@@ -1,3 +1,4 @@
+<!-- START: single.blade.php -->
 @extends('layouts.base')
 
 @section('content')
@@ -5,4 +6,4 @@
     @include('partials/content-single-'.get_post_type())
   @endwhile
 @endsection
-
+<!-- END: single.blade.php -->

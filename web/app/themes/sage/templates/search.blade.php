@@ -1,3 +1,4 @@
+<!-- START: search.blade.php -->
 @extends('layouts.base')
 
 @section('content')
@@ -16,3 +17,4 @@
 
   {!! get_the_posts_navigation() !!}
 @endsection
+<!-- END: search.blade.php -->

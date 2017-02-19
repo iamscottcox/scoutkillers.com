@@ -1,3 +1,4 @@
+<!-- START: page.blade.php -->
 @extends('layouts.base')
 
 @section('content')
@@ -6,3 +7,4 @@
     @include('partials.content-page')
   @endwhile
 @endsection
+<!-- END: page.blade.php -->

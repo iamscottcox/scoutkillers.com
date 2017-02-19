@@ -2,6 +2,7 @@
   Template Name: Custom Template
 --}}
 
+<!-- START: template-custom.blade.php -->
 @extends('layouts.base')
 
 @section('content')
@@ -10,3 +11,4 @@
     @include('partials.content-page')
   @endwhile
 @endsection
+<!-- END: template-custom.blade.php -->
