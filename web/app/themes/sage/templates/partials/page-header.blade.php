@@ -1,11 +1,7 @@
 <!-- START: page-header.blade.php -->
-<div class="container">
-  <div class="row">
-    <div class="col-xs">
-      <div class="page-header">
-        <h1>{!! App\title() !!}</h1>
-      </div>
-    </div>
-  </div>
-</div>
+@if (has_post_thumbnail())
+	@include('components.page-header-featured-image')
+@else
+	@include ('components.page-header-no-image')
+@endif
 <!-- END: page-header.blade.php -->

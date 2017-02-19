@@ -1,4 +1,12 @@
 <!-- START: content.blade.php -->
+@if (!have_posts())
+  <div class="alert alert-warning">
+    {{ __('Sorry, no results were found.', 'sage') }}
+  </div>
+  {!! get_search_form(false) !!}
+@endif
+
+@while (have_posts()) @php(the_post())
 <article @php(post_class())>
   <div class="container">
     <div class="row">
@@ -14,4 +22,5 @@
     </div>
   </div>
 </article>
+@endwhile
 <!-- END: content.blade.php -->
