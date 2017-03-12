@@ -10,7 +10,7 @@
 // Components
 @import "components/buttons";
 @import "components/comments";
-@import "components/page-header-featured-image";
+@import "components/holding-page-page-header-featured-image";
 @import "components/forms";
 @import "components/wp-classes";
 
@@ -21,3 +21,6 @@
 @import "layouts/pages";
 @import "layouts/posts";
 @import "layouts/tinymce";
+
+// Temporary
+@import "temporary/holding-page";
