@@ -70,7 +70,7 @@ let webpackConfig = {
         })}`,
       },
       {
-        test: /\.(ttf|eot)$/,
+        test: /\.(ttf|eot|otf)$/,
         include: config.paths.assets,
         loader: `file?${qs.stringify({
           name: `[path]${assetsFilenames}.[ext]`,
