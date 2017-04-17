@@ -1,0 +1,14 @@
+.featured-video {
+	* {
+		font-family: 'Ailerons', 'Oswald', $font-family-sans-serif;
+	}
+	iframe {
+		$length: 100vw;
+		margin: 3em 0;
+		height: calc((#{$length} / 16) * 9);
+		max-height: 70vh;
+		width: $length;
+		max-width: 100%;
+		box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+	}
+}
