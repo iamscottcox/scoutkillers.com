@@ -1,0 +1,8 @@
+.recent-photos {
+	.flex-container {
+		flex-flow: row wrap;
+		> * {
+			min-width: 25%;
+		}
+	}
+}

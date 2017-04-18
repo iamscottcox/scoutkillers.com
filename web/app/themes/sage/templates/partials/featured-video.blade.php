@@ -16,3 +16,5 @@ $query = new WP_Query($args);
 		</div>
 	</section>
 @endif
+
+@php(wp_reset_postdata())

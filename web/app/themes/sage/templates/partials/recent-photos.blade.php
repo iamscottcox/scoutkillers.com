@@ -1,27 +1,42 @@
 <?php
-
 $args = [
-	'post_type'  => 'image',
+	'post_type'  => 'photos',
 	'post_count' => 8,
 ];
 
 $query = new WP_Query($args);
 
+$imagesToDisplay = [];
+
+while ($query->have_posts()) {
+	$query->the_post();
+	$images = get_post_galleries_images();
+	if (count($imagesToDisplay, COUNT_RECURSIVE) <= 8) {
+		foreach ($images as $imageList) {
+			foreach ($imageList as $image) {
+				$title = get_the_title();
+				if (!array_key_exists($title, $imagesToDisplay)) {
+					$imagesToDisplay[$title] = [];
+				}
+				array_unshift($imagesToDisplay[$title], $image);
+			}
+		}
+	}
+}
 ?>
 
 @if($query->have_posts())
 	<section class="recent-photos">
 		<div class="container">
-			<h1>Recent Photos</h1>
-			<div class="row">
-				@while($query->have_posts()) @php($query->the_post())
-					<div class="col-sm-4">
-						@include('components.image-card_text-overlay', [
-							'title' => get_the_title(),
-							'imgSrc' => get_the_post_thumbnail_url(),
+			<div class="flex-container">
+				@foreach($imagesToDisplay as $title => $gallery)
+					@foreach($gallery as $imgSrc)
+						@include('components.image_photo-tile', [
+							'imgSrc' => $imgSrc,
+							'imgAlt' => $title,
 						])
-					</div>
-				@endwhile
+					@endforeach
+				@endforeach
 			</div>
 		</div>
 	</section>
