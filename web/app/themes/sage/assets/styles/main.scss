@@ -16,7 +16,9 @@
 @import "components/page-header-featured-image";
 @import "components/wp-classes";
 
-@import "components/image/image_photo-tile";
+@import "components/images/photo-tile";
+@import "components/images/photo-tile_text-overlay";
+@import "components/cards/standard-card";
 
 @import "partials/recent-photos";
 
