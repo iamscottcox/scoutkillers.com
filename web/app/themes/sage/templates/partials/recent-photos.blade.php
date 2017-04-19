@@ -1,7 +1,7 @@
 <?php
 $args = [
 	'post_type'  => 'photos',
-	'post_count' => 8,
+	'post_count' => 2,
 ];
 
 $query = new WP_Query($args);
@@ -26,18 +26,20 @@ while ($query->have_posts()) {
 ?>
 
 @if($query->have_posts())
-	<section class="recent-photos">
+	<section class="recent-photos scroll-reveal">
 		<div class="container">
-			<div class="flex-container">
-				@foreach($imagesToDisplay as $title => $gallery)
-					@foreach($gallery as $imgSrc)
-						@include('components.image_photo-tile', [
-							'imgSrc' => $imgSrc,
-							'imgAlt' => $title,
-						])
+			<h1 class="text-center">Recent Photos</h1>
+			<a href="/photos/">
+				<div class="flex-container">
+					@foreach($imagesToDisplay as $title => $gallery)
+						@foreach($gallery as $imgSrc)
+							@include('components.images.photo-tile', [
+								'imgSrc' => $imgSrc
+							])
+						@endforeach
 					@endforeach
-				@endforeach
-			</div>
+				</div>
+			</a>
 		</div>
 	</section>
 @endif
