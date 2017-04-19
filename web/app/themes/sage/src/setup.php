@@ -7,6 +7,8 @@ use Roots\Sage\Assets\JsonManifest;
 use Roots\Sage\Config;
 use Roots\Sage\Template\Blade;
 use Roots\Sage\Template\BladeProvider;
+use ScoutKillers\Classes\ACF;
+use ScoutKillers\Classes\CPT;
 
 /**
  * Theme assets
@@ -20,75 +22,12 @@ add_action('wp_enqueue_scripts', function () {
 /**
  * Theme Init
  */
-// Adds Portfolio CPT to theme.
-add_action('init', function() {
-	register_post_type('video',
-		[
-			'labels'      => [
-				'name'          => __('Videos'),
-				'singular_name' => __('Video'),
-			],
-			'public'      => true,
-			'has_archive' => true,
-			'supports'    => [
-				'title',
-				'thumbnail',
-			],
-		]
-	);
-});
-
-if(function_exists("register_field_group"))
-{
-	register_field_group(array (
-		'id' => 'acf_video',
-		'title' => 'Video',
-		'fields' => array (
-			array (
-				'key' => 'field_58e17ba410291',
-				'label' => 'Embed Code',
-				'name' => 'embed_code',
-				'type' => 'text',
-				'required' => 1,
-				'default_value' => '',
-				'placeholder' => '',
-				'prepend' => 'https://youtube.com/embed/',
-				'append' => '',
-				'formatting' => 'html',
-				'maxlength' => '',
-			),
-			array (
-				'key' => 'field_58e17c2910292',
-				'label' => 'Release Date',
-				'name' => 'release_date',
-				'type' => 'date_picker',
-				'required' => 1,
-				'date_format' => 'dd/mm/yy',
-				'display_format' => 'dd/mm/yy',
-				'first_day' => 1,
-			),
-		),
-		'location' => array (
-			array (
-				array (
-					'param' => 'post_type',
-					'operator' => '==',
-					'value' => 'video',
-					'order_no' => 0,
-					'group_no' => 0,
-				),
-			),
-		),
-		'options' => array (
-			'position' => 'normal',
-			'layout' => 'no_box',
-			'hide_on_screen' => array (
-			),
-		),
-		'menu_order' => 0,
-	));
-}
-
+// Adds Custom Post Types
+CPT::register_photos();
+CPT::register_video();
+// Adds Advanced Custom Fields
+ACF::register_acf_video();
+ACF::register_acf_template_archive_page();
 
 /**
  * Theme setup
