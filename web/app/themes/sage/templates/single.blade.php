@@ -2,8 +2,6 @@
 @extends('layouts.base')
 
 @section('content')
-  @while(have_posts()) @php(the_post())
-    @include('partials/content)
-  @endwhile
+    @include('partials.content')
 @endsection
 <!-- END: single.blade.php -->
