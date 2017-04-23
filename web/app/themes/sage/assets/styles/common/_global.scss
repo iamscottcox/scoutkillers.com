@@ -1,8 +1,8 @@
 section {
-	margin-bottom: 10em;
-	&:last-of-type {
-		margin-bottom: 0;
-	}
+	margin-bottom: 5em;
+	//&:last-of-type {
+	//	margin-bottom: 0;
+	//}
 }
 
 .flex-container {
@@ -16,6 +16,24 @@ section {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
+	align-items: center;
+	> * {
+		margin: 1em;
+		box-shadow: $box-shadow-3;
+		border-radius: $border-radius;
+		transition: $transition;
+		&:hover {
+			box-shadow: $box-shadow-5;
+		}
+		* {
+			border-radius: $border-radius;
+		}
+		img {
+			height: 225px;
+			max-width: 300px;
+			width: auto;
+		}
+	}
 }
 
 .box-shadow-1 {
