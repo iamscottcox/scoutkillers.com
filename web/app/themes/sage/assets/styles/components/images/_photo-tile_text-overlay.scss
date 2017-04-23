@@ -2,8 +2,8 @@
 	width: 100%;
 	position: relative;
 	border-radius: $border-radius;
-	overflow-x: hidden;
-	height: 250px;
+	overflow: hidden;
+	height: 225px;
 	box-shadow: $box-shadow-3;
 	transition: $transition;
 	&:hover {
@@ -12,8 +12,7 @@
 		}
 	}
 	img {
-		height: 100%;
-		width: auto;
+		width: 100%;
 	}
 	p, h1, h2, h3, h4, h5, h6 {
 		position: absolute;
