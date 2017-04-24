@@ -1,8 +1,9 @@
 section {
 	margin-bottom: 5em;
-	//&:last-of-type {
-	//	margin-bottom: 0;
-	//}
+}
+
+* {
+	box-sizing: border-box !important;
 }
 
 .flex-container {
@@ -18,7 +19,7 @@ section {
 	justify-content: center;
 	align-items: center;
 	> * {
-		margin: 1em;
+		margin: $spacer;
 		box-shadow: $box-shadow-3;
 		border-radius: $border-radius;
 		transition: $transition;
@@ -31,7 +32,7 @@ section {
 		img {
 			height: 225px;
 			max-width: 300px;
-			width: auto;
+			width: 100%;
 		}
 	}
 }
@@ -50,4 +51,26 @@ section {
 }
 .box-shadow-5 {
 	box-shadow: $box-shadow-5;
+}
+
+.feature-title {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	margin-bottom: $spacer-y;
+	flex: 1;
+	&::before, &::after {
+		content: '';
+		width: 100%;
+		flex: 1;
+		height: 3px;
+		background: $black;
+		display: block;
+	}
+	&::before {
+		margin-right: $spacer-x;
+	}
+	&::after {
+		margin-left: $spacer-x;
+	}
 }

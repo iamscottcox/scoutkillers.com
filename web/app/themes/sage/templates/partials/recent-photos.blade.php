@@ -10,9 +10,7 @@ $query = new WP_Query($args);
 @if($query->have_posts())
 	<section class="recent-photos scroll-reveal">
 		<div class="container">
-			<a href="/photos/">
-				<h1>Recent Photos</h1>
-			</a>
+			<h3 class="feature-title">Recent Photos</h3>
 			<div class="row">
 				@while($query->have_posts()) @php($query->the_post())
 				<div class="col-sm-4">

@@ -1,14 +1,7 @@
 .recent-photos {
-	.flex-container {
-		flex-flow: row wrap;
-		> * {
-			min-width: 25%;
-			@include media-breakpoint-down(sm) {
-				min-width: 100%;
-				&:nth-child(n+5) {
-					display: none;
-				}
-			}
+	.photo-tile_text-overlay {
+		@include media-breakpoint-down(xs) {
+			margin-bottom: $spacer-y;
 		}
 	}
 }

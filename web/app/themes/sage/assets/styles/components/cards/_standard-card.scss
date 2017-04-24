@@ -1,11 +1,11 @@
 .card {
-	margin-bottom: 1em;
+	margin-bottom: $spacer-y;
 	.card-title {
-		margin-bottom: 0.75em;
+		margin-bottom: $spacer-y;
 		border-bottom: 1px solid $gray-lighter;
-		padding-bottom: 0.75em;
+		padding-bottom: $spacer-y;
 	}
 	.card-text {
-		margin-bottom: 1.5em;
+		margin-bottom: $spacer-y;
 	}
 }
