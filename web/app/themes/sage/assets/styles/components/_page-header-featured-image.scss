@@ -2,11 +2,110 @@
 	overflow: hidden;
 	text-align: center;
 	margin-top: $spacer-y;
+	position: relative;
 	img {
+		position: relative;
+		z-index: 100;
 		width: auto;
 		max-width: 100%;
 		height: auto;
 		max-height: 100vh;
 		mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 50%,rgba(255, 255, 255, 0) 100%);
+	}
+	.featured-image-title {
+		z-index: 200;
+		position: absolute;
+		height: 0;
+		margin: auto;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		color: $white;
+		text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.85);
+		font-family: $feature-font-family;
+		transform: translateY(-1em);
+	}
+}
+
+.home {
+	.featured-image-title {
+		opacity: 0;
+		animation: fadeIn 2s ease-in-out 1s;
+		animation-fill-mode: forwards;
+	}
+	.floating-petal {
+		opacity: 0;
+		position: absolute;
+		margin: auto;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		height: auto;
+		animation: fadeInFromLeftOutToRight ease-in-out infinite;
+	}
+	#petal1 {
+		animation-duration: 4s;
+		animation-delay: 1s;
+		top: -85%;
+	}
+	#petal2 {
+		animation-duration: 4s;
+		animation-delay: 2s;
+		top: -80%;
+	}
+	#petal3 {
+		animation-duration: 5s;
+		animation-delay: 3s;
+		top: -75%;
+	}
+	#petal4 {
+		animation-duration: 5s;
+		animation-delay: 4s;
+		top: -70%;
+	}
+	#petal5 {
+		animation-duration: 5s;
+		animation-delay: 5s;
+		top: -65%;
+	}
+	#petal6 {
+		animation-duration: 5s;
+		animation-delay: 6s;
+		top: -60%;
+	}
+	#petal7 {
+		animation-duration: 5s;
+		animation-delay: 7s;
+		top: -55%;
+	}
+	#petal8 {
+		animation-duration: 5s;
+		animation-delay: 8s;
+		top: -50%;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeInFromLeftOutToRight {
+	0% {
+		opacity: 0;
+		transform: rotate(45deg);
+	}
+	25% {
+		opacity: 1
+	}
+	100% {
+		opacity: 0;
+		transform: translateX(-100vw) translateY(-10vw) rotate(-45deg);
 	}
 }

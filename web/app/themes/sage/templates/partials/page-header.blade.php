@@ -1,7 +1,11 @@
 <!-- START: page-header.blade.php -->
 <section class="page-header">
 	@if (has_post_thumbnail())
-		@include('components.page-header-featured-image')
+		@if(is_front_page())
+			@include('components.front-page-page-header-featured-image')
+		@else
+			@include('components.page-header-featured-image')
+		@endif
 	@else
 		@include ('components.page-header-no-image')
 	@endif
