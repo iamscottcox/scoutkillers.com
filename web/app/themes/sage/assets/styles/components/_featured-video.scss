@@ -1,10 +1,13 @@
 .featured-video {
 	* {
-		font-family: 'Ailerons', 'Oswald', $font-family-sans-serif;
+		font-family: $font-family-sans-serif;
+	}
+	.feature-title {
+		font-family: $feature-font-family;
 	}
 	iframe {
 		$length: 100vw;
-		margin-bottom: $spacer-y;
+		margin-bottom: $spacer-y * 2;
 		height: calc((#{$length} / 16) * 9);
 		max-height: 70vh;
 		width: $length;
