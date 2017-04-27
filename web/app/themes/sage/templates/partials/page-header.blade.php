@@ -7,7 +7,8 @@
 			@include('components.page-header-featured-image')
 		@endif
 	@else
-		@include ('components.page-header-no-image')
+		@include('components.page-header-no-image')
 	@endif
+	@include('components.scroll-down-chevron')
 </section>
 <!-- END: page-header.blade.php -->
