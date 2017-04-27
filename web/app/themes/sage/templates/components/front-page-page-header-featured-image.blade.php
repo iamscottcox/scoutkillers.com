@@ -10,5 +10,6 @@
 	<img id="petal6" src="/app/themes/sage/dist/images/Petal_6.png" alt="Floating petal" class="floating-petal">
 	<img id="petal7" src="/app/themes/sage/dist/images/Petal_7.png" alt="Floating petal" class="floating-petal">
 	<img id="petal8" src="/app/themes/sage/dist/images/Petal_8.png" alt="Floating petal" class="floating-petal">
+	<img id="petal9" src="/app/themes/sage/dist/images/Petal_9.png" alt="Floating petal" class="floating-petal">
 </div>
 <!-- END: page-header-featured-image.blade.php -->
