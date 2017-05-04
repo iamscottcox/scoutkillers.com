@@ -1,35 +1,38 @@
 .gig-date {
-	display: flex;
-	flex-direction: row;
-	@include media-breakpoint-down(xs) {
-		flex-direction: column-reverse;
-		&::before {
-			content: '';
-			display: block;
-			height: 1px;
-			background: lighten($gray-light, 25%);
-			width: 80%;
-			margin: $spacer-y auto 0;
-		}
-	}
-	.gig-date_venue, .gig-date_date {
-		width: 50%;
-		margin: $spacer;
+	a {
+		display: flex;
+		flex-direction: row;
+		color: $black;
 		@include media-breakpoint-down(xs) {
-			width: 100%;
-			margin: $spacer-y auto;
+			flex-direction: column-reverse;
+			&::before {
+				content: '';
+				display: block;
+				height: 1px;
+				background: lighten($gray-light, 25%);
+				width: 80%;
+				margin: $spacer-y auto 0;
+			}
 		}
-	}
-	.gig-date_venue {
-		text-align: right;
-		@include media-breakpoint-down(xs) {
-			text-align: center;
+		.gig-date_venue, .gig-date_date {
+			width: 50%;
+			margin: $spacer;
+			@include media-breakpoint-down(xs) {
+				width: 100%;
+				margin: $spacer-y auto;
+			}
 		}
-	}
-	.gig-date_date {
-		text-align: left;
-		@include media-breakpoint-down(xs) {
-			text-align: center;
+		.gig-date_venue {
+			text-align: right;
+			@include media-breakpoint-down(xs) {
+				text-align: center;
+			}
+		}
+		.gig-date_date {
+			text-align: left;
+			@include media-breakpoint-down(xs) {
+				text-align: center;
+			}
 		}
 	}
 }
