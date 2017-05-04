@@ -61,46 +61,73 @@
 	#petal1 {
 		animation-duration: 4s;
 		animation-delay: 1s;
-		top: -50vh;
+		bottom: 320px;
+		@include media-breakpoint-down(xs) {
+			bottom: 270px;
+		}
 	}
 	#petal2 {
 		animation-duration: 4s;
 		animation-delay: 8s;
-		top: -45vh;
+		bottom: 400px;
+		@include media-breakpoint-down(xs) {
+			bottom: 300px;
+		}
 	}
 	#petal3 {
 		animation-duration: 5s;
 		animation-delay: 3s;
-		top: -40vh;
+		bottom: 440px;
+		@include media-breakpoint-down(xs) {
+			bottom: 340px;
+		}
 	}
 	#petal4 {
 		animation-duration: 5s;
 		animation-delay: 4s;
-		top: -35vh;
+		bottom: 470px;
+		@include media-breakpoint-down(xs) {
+			bottom: 370px;
+		}
 	}
 	#petal5 {
 		animation-duration: 5s;
 		animation-delay: 5s;
-		top: -30vh;
+		bottom: 500px;
+		@include media-breakpoint-down(xs) {
+			bottom: 400px;
+		}
 	}
 	#petal6 {
 		animation-duration: 5s;
 		animation-delay: 6s;
-		top: -25vh;
+		bottom: 320px;
+		@include media-breakpoint-down(xs) {
+			bottom: 320px;
+		}
 	}
 	#petal7 {
 		animation-duration: 5s;
 		animation-delay: 7s;
-		top: -20vh;
+		bottom: 400px;
+		@include media-breakpoint-down(xs) {
+			bottom: 300px;
+		}
 	}
 	#petal8 {
 		animation-duration: 5s;
 		animation-delay: 2s;
-		top: -30vh;
+		bottom: 320px;
+		@include media-breakpoint-down(xs) {
+			bottom: 220px;
+		}
 	}
 	#petal9 {
 		animation-duration: 4s;
 		animation-delay: 3s;
-		top: -40vh;
+		bottom: 400px;
+		@include media-breakpoint-down(xs) {
+			bottom: 300px;
+		}
 	}
 }
