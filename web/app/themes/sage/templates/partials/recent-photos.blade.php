@@ -11,17 +11,17 @@ $query = new WP_Query($args);
 	<section class="recent-photos scroll-reveal">
 		<div class="container">
 			<h3 class="feature-title">Recent Photos</h3>
+			@while($query->have_posts()) @php($query->the_post())
 			<div class="row">
-				@while($query->have_posts()) @php($query->the_post())
-				<div class="col-sm-4">
-					@include('components.images.photo-tile_text-overlay', [
+				<div class="col-12">
+					@include('components.images.photo-floating-panel', [
 						'imgSrc' => get_the_post_thumbnail_url(),
 						'href' => get_the_permalink(),
 						'title' => get_the_title(),
 					])
 				</div>
-				@endwhile
 			</div>
+			@endwhile
 		</div>
 	</section>
 @endif

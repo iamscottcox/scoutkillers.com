@@ -1,0 +1,16 @@
+.photo-floating-panel {
+	a {
+		display: flex;
+		flex-flow: row nowrap;
+		img {
+			width: auto;
+			height: auto;
+			max-height: 400px;
+		}
+		p {
+			height: 1%;
+			align-self: center;
+			margin: auto;
+		}
+	}
+}
