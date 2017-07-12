@@ -2,7 +2,9 @@
 
 use ScoutKillers\Classes\Songkick;
 
-$gigs = Songkick::getUpcomingDates();
+$songkick = new Songkick();
+
+$gigs = $songkick->getUpcomingDates();
 
 ?>
 
