@@ -1,16 +1,24 @@
 .photo-floating-panel {
+	padding: $spacer;
+	padding-bottom: $spacer * 3;
 	a {
 		display: flex;
 		flex-flow: row nowrap;
-		img {
-			width: auto;
-			height: auto;
-			max-height: 400px;
+		&:hover {
+			text-decoration: none;
+		}
+		.photo-floating-panel-image-container {
+			flex: 1;
+			height: 300px;
+			background-position: center center;
+			background-size: cover;
+			box-shadow: 50px 40px 28px rgba(0, 0, 0, 0.25), 46px 36px 10px rgba(0, 0, 0, 0.22);
 		}
 		p {
-			height: 1%;
 			align-self: center;
-			margin: auto;
+			text-align: center;
+			color: $black;
+			margin-left: $spacer * 5;
 		}
 	}
 }

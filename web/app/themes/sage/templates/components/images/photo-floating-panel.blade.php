@@ -1,6 +1,6 @@
 <div class="photo-floating-panel">
 	<a href="{{ $href }}">
-		<img src="{{ $imgSrc }}" alt="{{ $title }}">
+		<div class="photo-floating-panel-image-container" style="background-image: url('<?php echo e($imgSrc); ?>')"></div>
 		<p class="h1">{{ $title }}</p>
 	</a>
 </div>
