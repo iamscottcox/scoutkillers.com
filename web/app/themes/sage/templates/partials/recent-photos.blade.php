@@ -11,7 +11,7 @@ $query = new WP_Query($args);
 @if($query->have_posts())
 	<section class="recent-photos scroll-reveal">
 		<div class="container">
-			<h3 class="feature-title">GALLERY</h3>
+			<h1 class="feature-title">GALLERY</h1>
 			@while($query->have_posts()) @php($query->the_post())
 			<div class="row hidden-sm-down">
 				<div class="col-12">

@@ -11,7 +11,7 @@ $gigs = $songkick->getUpcomingDates();
 @if (!empty($gigs))
 	<section class="gig-dates scroll-reveal">
 		<div class="container">
-			<h3 class="feature-title">SHOWS</h3>
+			<h1 class="feature-title">SHOWS</h1>
 			@foreach($gigs as $gig)
 				@include('components/gig-date', [
 					'venue' => $gig['venue'],
