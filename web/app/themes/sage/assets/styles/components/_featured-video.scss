@@ -1,15 +1,17 @@
 .featured-video {
+	margin-bottom: $spacer * 10;
 	* {
 		font-family: $font-family-sans-serif;
 	}
-	.feature-title {
+	p {
 		font-family: $feature-font-family;
+		padding: ($spacer * 2) 0;
 	}
 	iframe {
 		$length: 100vw;
 		margin-bottom: $spacer-y * 2;
 		height: calc((#{$length} / 16) * 9);
-		max-height: 70vh;
+		max-height: 60vh;
 		width: $length;
 		max-width: 100%;
 		box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
