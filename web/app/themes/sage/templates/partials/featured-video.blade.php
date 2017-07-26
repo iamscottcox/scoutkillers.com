@@ -1,6 +1,6 @@
 <?php
 $args = [
-	'post_type'      => 'video',
+	'post_type'      => 'featured_video',
 	'posts_per_page' => 1
 ];
 

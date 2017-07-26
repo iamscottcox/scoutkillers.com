@@ -11,6 +11,97 @@ namespace ScoutKillers\Classes;
 
 class ACF
 {
+
+	static public function register_acf_featured_video()
+	{
+		if (function_exists("register_field_group")) {
+			register_field_group([
+				'id'         => 'acf_featured-video',
+				'title'      => 'Featured Video',
+				'fields'     => [
+					[
+						'key'            => 'field_58e17c2910292',
+						'label'          => 'Release Date',
+						'name'           => 'release_date',
+						'type'           => 'date_picker',
+						'required'       => 1,
+						'date_format'    => 'dd/mm/yy',
+						'display_format' => 'dd/mm/yy',
+						'first_day'      => 1,
+					],
+					[
+						'key'           => 'field_59791194f3567',
+						'label'         => 'Embed Code',
+						'name'          => 'embed_code',
+						'type'          => 'text',
+						'required'      => 1,
+						'default_value' => '',
+						'placeholder'   => '',
+						'prepend'       => 'https://youtube.com/embed/',
+						'append'        => '',
+						'formatting'    => 'html',
+						'maxlength'     => '',
+					],
+					[
+						'key'           => 'field_597911e0f3568',
+						'label'         => 'Spotify Link',
+						'name'          => 'spotify_link',
+						'type'          => 'text',
+						'default_value' => '',
+						'placeholder'   => '',
+						'prepend'       => '',
+						'append'        => '',
+						'formatting'    => 'html',
+						'maxlength'     => '',
+					],
+					[
+						'key'           => 'field_59791204f3569',
+						'label'         => 'iTunes Link',
+						'name'          => 'itunes_link',
+						'type'          => 'text',
+						'default_value' => '',
+						'placeholder'   => '',
+						'prepend'       => '',
+						'append'        => '',
+						'formatting'    => 'html',
+						'maxlength'     => '',
+					],
+					[
+						'key'           => 'field_5979120ef356a',
+						'label'         => 'Soundcloud Link',
+						'name'          => 'soundcloud_link',
+						'type'          => 'text',
+						'default_value' => '',
+						'placeholder'   => '',
+						'prepend'       => '',
+						'append'        => '',
+						'formatting'    => 'html',
+						'maxlength'     => '',
+					],
+				],
+				'location'   => [
+					[
+						[
+							'param'    => 'post_type',
+							'operator' => '==',
+							'value'    => 'featured_video',
+							'order_no' => 0,
+							'group_no' => 0,
+						],
+					],
+				],
+				'options'    => [
+					'position'       => 'normal',
+					'layout'         => 'no_box',
+					'hide_on_screen' => [
+					],
+				],
+				'menu_order' => 0,
+			]);
+		}
+
+	}
+
 	static public function register_acf_video()
 	{
 
@@ -32,16 +123,6 @@ class ACF
 						'append'        => '',
 						'formatting'    => 'html',
 						'maxlength'     => '',
-					],
-					[
-						'key'            => 'field_58e17c2910292',
-						'label'          => 'Release Date',
-						'name'           => 'release_date',
-						'type'           => 'date_picker',
-						'required'       => 1,
-						'date_format'    => 'dd/mm/yy',
-						'display_format' => 'dd/mm/yy',
-						'first_day'      => 1,
 					],
 				],
 				'location'   => [

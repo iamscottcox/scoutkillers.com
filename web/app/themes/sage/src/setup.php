@@ -25,9 +25,11 @@ add_action('wp_enqueue_scripts', function () {
 // Adds Custom Post Types
 CPT::register_photos();
 CPT::register_video();
+CPT::register_featured_video();
 // Adds Advanced Custom Fields
-ACF::register_acf_video();
 ACF::register_acf_template_archive_page();
+ACF::register_acf_video();
+ACF::register_acf_featured_video();
 
 /**
  * Theme setup
